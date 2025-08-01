@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- <div>
@@ -50,11 +51,76 @@
     </div> -->
 
 
-    <h1> Today is </h1>
-    <button onclick="this.innerHTML= Date()">Click</button>
+    <form action="none" class="Form" id="Form">
+         <div class="pic">
+                <img src="IMG-20241124-WA0173.jpg" alt="">
+        </div>
+        <class="form-container">
+           
+            <div class="info">
+                <Label> Name </Label>
+                <input type="text" placeholder="Please enter your name" required>
+            </div>
+            <div class="info">
+                <Label> Gender </Label>
+                <select required>
+                    <option> Male </option>
+                    <option> Female </option>
+                    <option> Rather not say </option>
+                </select>
+            </div>
+             <div class="info">
+                <Label> Date of Birth </Label>
+                <input type="date" placeholder="Please enter your date of Birth" required>
+            </div>
+            <div class="info">
+                <Label> Age </Label>
+                <select class="age" id="age" required></select>
+            </div>
+            <div class="info">
+                <Label> Level </Label>
+                <select required>
+                    <option> 100</option>
+                    <option> 200</option>
+                    <option> 300</option>
+                    <option> 400</option>
+                    <option> 500</option>
+                </select>
+            </div>
+            <div class="info">
+                <Label> Score </Label>
+                <input type="number" placeholder="Please enter your score" max="100" required>
+            </div>
+            <div class="info">
+                <Label> Email </Label>
+                <input type="email" placeholder="Please enter your email" required>
+            </div>
+            <div class="info">
+                <Label> Adress </Label>
+                <input type="text" placeholder="Please enter your Adress" required>
+            </div>
+            <button onclick="ButtonFunc" class="button"> Submit </button>
+        </div>
+        <p id="demo" style="display: none;">Registered succesfully </p>
+    </form>
+
+
     <script>
-        let a= " We are the so called \"Vikings\""
-        document.write("<br>" + a.indexOf("Vikings"));
+        let select = document.getElementById("age");
+        for (b= 1; b< 200; b++){ 
+            const option = document.createElement("option");
+            option.value=b;
+            option.textContent= b;
+            select.appendChild(option);
+        }
+
+        function ButtonFunc(){
+            const Form = document.getElementById("Form");
+            const message = document.getElementById("demo");
+
+            // Form.addEventListener("input", ())
+
+        }
     </script>
 </body>
 </html>

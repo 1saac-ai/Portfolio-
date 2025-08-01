@@ -1,3 +1,77 @@
-.body{
-    
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: azure;
+}
+.Form{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    justify-self: center;
+    border: 3px;
+
+}
+.pic{
+    display: flex;
+    justify-content: center;
+}
+.pic img{
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.info:hover{
+    transform: translate(1px, -5px);
+}
+.info Label{
+    font-size: 30px;
+    padding-left: 7px;
+}
+.info input{
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px grey;
+    border: none;
+}
+.info input:hover{
+    box-shadow: 5px 5px 12px rgb(64, 156, 243);
+}
+.info input:valid{
+    box-shadow: 5px 5px 12px rgb(64, 156, 243);
+}
+.info select{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px grey;
+    border: none;
+}
+.info input::placeholder{
+    text-align: center;
+}
+.info option{
+    text-align: center;
+}
+
+.button{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(135, 173, 243);
+    margin: 20px 0px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 4px 4px 5px grey;
+}
+
+.button:hover{
+    background-color: cadetblue;
+    transform: translate(0px, -7px );
 }
